@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./pokedex.css" />
+  </head>
+  <body>
+    <h1>Pokedex LaunchX</h1>
+    <section id="pokedex">
+      <div id="parte-izquierda">
+        <div id="busquedaPokemon">
+          <input
+            type="text"
+            placeholder="pikachu"
+            id="pokeName"
+            name="pokeName"
+          />
+          <button onclick="fetchByName()" class="boton-buscar">Buscar</button>
+        </div>
+        <div id="essential-description">
+          <img
+            src="./assets/img/Missingno.png"
+            alt="Pokemon"
+            id="pokeImg"
+            width="150px"
+          />
+          <h2 id="pokemonName"></h2>
+        </div>
+        <div id="botones-seleccion">
+          <button onclick="getPreviousPokemon()" class="boton-control">
+            Anterior
+          </button>
+          <button onclick="getFollowingPokemon()" class="boton-control">
+            Siguiente
+          </button>
+        </div>
+      </div>
+      <div id="parte-derecha" class="texto-estadisticas">
+        <p>Tipo: <span id="pokemonType" class="type-text"></span></p>
+        <div id="statistics">
+          <p>PS: <span id="hp" class="texto-valor"></span></p>
+          <p>ATK: <span id="atk" class="texto-valor"></span></p>
+          <p>DEF: <span id="def" class="texto-valor"></span></p>
+          <p>SP.ATK: <span id="spatk" class="texto-valor"></span></p>
+          <p>SP.DEF: <span id="spdef" class="texto-valor"></span></p>
+          <p>SPEED: <span id="speed" class="texto-valor"></span></p>
+        </div>
+        <div id="movimientos">
+          <h2>Movimientos</h2>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <script src="./pokedex.js"></script>
+  </footer>
+</html>
